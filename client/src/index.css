@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 20%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+    
+    --primary: 347 100% 67%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 352 100% 78%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 348 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 347 100% 67%;
+    
+    --radius: 0.5rem;
+
+    --chart-1: 347 100% 67%;
+    --chart-2: 352 100% 78%;
+    --chart-3: 348 100% 60%;
+    --chart-4: 285 40% 42%;
+    --chart-5: 212 62% 45%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 347 100% 67%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 348 100% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 347 100% 67%;
+  }
+
+  .dark {
+    --background: 0 0% 12%;
+    --foreground: 0 0% 98%;
+    
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 347 100% 67%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 352 100% 78%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 348 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 30%;
+    --input: 0 0% 30%;
+    --ring: 347 100% 67%;
+  }
+}
+
+@layer utilities {
+  .canvas-container {
+    touch-action: none;
+  }
+
+  .heart-btn {
+    @apply shadow-md shadow-primary/20 transition-all duration-300;
+  }
+  
+  .heart-btn:hover {
+    @apply transform -translate-y-0.5 shadow-lg shadow-primary/25;
+  }
+  
+  .drawing-canvas {
+    @apply shadow-lg shadow-black/5;
+  }
+  
+  .tool-btn.active {
+    @apply bg-primary/15 text-accent;
+  }
+
+  .color-swatch {
+    @apply transition-transform duration-200;
+  }
+  
+  .color-swatch:hover {
+    @apply transform scale-110;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-200 text-neutral-800;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    @apply font-semibold;
+  }
+}
